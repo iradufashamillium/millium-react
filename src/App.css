@@ -1,0 +1,33 @@
+main {
+  margin-top: 80px; /* Match header height */
+  min-height: calc(100vh - 80px - 200px); /* Adjust for footer if needed */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-content {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.page-content h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.page-content p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.nav-links li.active a {
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 4px;
+}
