@@ -1,23 +1,25 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './Header.css';
 
-const Header = ({ onLogout, setView, currentView }) => {
+const Header = ({ onLogout }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navItems = [
-    { name: 'Home', id: 'home' },
-    { name: 'About', id: 'about' },
-    { name: 'Team', id: 'team' },
-    { name: 'Contact', id: 'contact' }
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Team', path: '/team' },
+    { name: 'Contact', path: '/contact' }
   ];
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleNavClick = (view) => {
-    setView(view);
-    setIsMenuOpen(false); // Close menu after selection
+  const handleLogout = () => {
+    onLogout();
+    navigate('/login');
   };
 
   return (
@@ -36,9 +38,11 @@ const Header = ({ onLogout, setView, currentView }) => {
           </svg>
         </button>
 
-        <h1 className="header-title" onClick={() => handleNavClick('home')}>
-          WELCOME TO MY REACT PROJECT
-        </h1>
+        <Link to="/" className="header-title-link" onClick={() => setIsMenuOpen(false)}>
+          <h1 className="header-title">
+            WELCOME TO MY REACT PROJECT
+          </h1>
+        </Link>
       </header>
 
       <nav className={`sidebar-nav ${isMenuOpen ? 'open' : ''}`}>
@@ -48,14 +52,14 @@ const Header = ({ onLogout, setView, currentView }) => {
         </div>
         <ul className="nav-list">
           {navItems.map((item) => (
-            <li key={item.id} className={currentView === item.id ? 'active' : ''}>
-              <button onClick={() => handleNavClick(item.id)} className="nav-link">
+            <li key={item.path}>
+              <Link to={item.path} onClick={() => setIsMenuOpen(false)} className="nav-link">
                 {item.name}
-              </button>
+              </Link>
             </li>
           ))}
           <li className="logout-li">
-            <button onClick={onLogout} className="nav-link logout-btn">
+            <button onClick={handleLogout} className="nav-link logout-btn">
               Logout
             </button>
           </li>

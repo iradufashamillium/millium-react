@@ -1,7 +1,7 @@
 import React from 'react';
 import './FeatureCards.css';
 
-const FeatureCards = () => {
+const FeatureCards = ({ searchTerm = '' }) => {
   const features = [
     {
       title: 'Number of Users',
@@ -39,18 +39,35 @@ const FeatureCards = () => {
     }
   ];
 
+  const filteredFeatures = features.filter(feature => 
+    feature.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    feature.description.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
  return (
     <section className="feature-cards-section">
       <div className="container">
-        <div className="cards-grid">
-          {features.map((feature, index) => (
-            <div key={index} className="card">
-              <div className="card-icon">{feature.icon}</div>
-              <h3 className="card-title">{feature.title}</h3>
-              <p className="card-description">{feature.description}</p>
-            </div>
-          ))}
-        </div>
+        {filteredFeatures.length > 0 ? (
+          <div className="cards-grid">
+            {filteredFeatures.map((feature, index) => (
+              <div key={index} className="card">
+                <div className="card-icon">{feature.icon}</div>
+                <h3 className="card-title">{feature.title}</h3>
+                <p className="card-description">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="no-results" style={{ textAlign: 'center', padding: '40px', color: '#666' }}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '15px', opacity: 0.5 }}>
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+            <h3>No results found</h3>
+            <p>We couldn't find anything matching "{searchTerm}"</p>
+          </div>
+        )}
       </div>
     </section>
   );
