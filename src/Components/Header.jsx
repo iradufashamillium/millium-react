@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Header.css';
 
-const Header = ({ onLogout }) => {
+const Header = ({ onLogout, user, isAuthenticated }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -58,10 +58,16 @@ const Header = ({ onLogout }) => {
               </Link>
             </li>
           ))}
-          <li className="logout-li">
-            <button onClick={handleLogout} className="nav-link logout-btn">
-              Logout
-            </button>
+          <li className="auth-li">
+            {isAuthenticated ? (
+              <button onClick={handleLogout} className="nav-link logout-btn">
+                Logout
+              </button>
+            ) : (
+              <Link to="/login" onClick={() => setIsMenuOpen(false)} className="nav-link login-btn">
+                Login
+              </Link>
+            )}
           </li>
         </ul>
       </nav>

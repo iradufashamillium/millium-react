@@ -1,32 +1,32 @@
-import React, { useState } from 'react';
-import Hero from './Hero';
-import FeatureCards from './FeatureCards';
+import React from 'react';
+import './Home.css';
 
 const Home = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-
   return (
-    <>
-      <Hero />
-      <div className="search-container" style={{ padding: '20px 0', textAlign: 'center' }}>
-        <input
-          type="text"
-          placeholder="Search features..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          style={{
-            padding: '10px 15px',
-            width: '300px',
-            borderRadius: '25px',
-            border: '1px solid #ddd',
-            fontSize: '16px',
-            outline: 'none',
-            boxShadow: '0 2px 5px rgba(0,0,0,0.1)'
-          }}
-        />
-      </div>
-      <FeatureCards searchTerm={searchTerm} />
-    </>
+    <div className="home-page">
+      <section className="hero-section">
+        <h1>Welcome to Millium React</h1>
+        <p>A modern web application built with React and Vite</p>
+      </section>
+
+      <section className="features-section">
+        <h2>Our Features</h2>
+        <div className="features-grid">
+          <div className="feature-card">
+            <h3>Fast Performance</h3>
+            <p>Built with Vite for lightning-fast development and optimized production builds</p>
+          </div>
+          <div className="feature-card">
+            <h3>Modern Stack</h3>
+            <p>Powered by React 18 with the latest features and best practices</p>
+          </div>
+          <div className="feature-card">
+            <h3>Secure Backend</h3>
+            <p>Node.js and MySQL backend with authentication and data protection</p>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 

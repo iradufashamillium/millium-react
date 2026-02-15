@@ -12,6 +12,11 @@
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
   width: 250px;
+  user-select: none;
+}
+
+.team-member:active {
+  opacity: 1;
 }
 
 .member-avatar {

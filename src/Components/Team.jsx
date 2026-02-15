@@ -6,20 +6,20 @@ const Team = () => {
     { 
      
         
-      role: 'Nyiranziza angelique',
-      image: 'https://scontent.fnbo18-1.fna.fbcdn.net/v/t39.30808-6/605731903_122174477882426057_6575193172283421840_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=RHcJoollEAYQ7kNvwEPj696&_nc_oc=Adlirawzo527kn4hPuok1Anzr_2UKbaKJLy1YRwh8j3epprX8RGSRkM8IWqvPw4P51U&_nc_zt=23&_nc_ht=scontent.fnbo18-1.fna&_nc_gid=lFi5GVwB3t4FjUHk-q81YQ&oh=00_AfvzA-Kif29NkABTMbxtSycP_FlRdLPL71AV3Hn5TaNFrw&oe=698D4BC4'
+      role: 'naila uwase',
+      image:'https://scontent.fnbo18-1.fna.fbcdn.net/v/t39.30808-6/474956318_122158007042321146_8823717372122840328_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=8LaW29mPcZ4Q7kNvwE72H5a&_nc_oc=AdkF_AOgCnPzOwWhhnOvv7HbMJJxbMmJR-Eh1weP0PfN0M6L2BYDuCDpnMxdIqn20O0&_nc_zt=23&_nc_ht=scontent.fnbo18-1.fna&_nc_gid=k3Vhx0ABQR_vp5_5oAIVZQ&oh=00_AfupAxn8CHjsYRhHAmaEWWmgxK4iXBMSeKnTpSBhdPLzTQ&oe=69969434'
     },
     { 
       
         
       role: 'Iradufasha millium',
-      image: 'https://scontent.fnbo18-1.fna.fbcdn.net/v/t39.30808-6/558918207_122198232710321146_2277505476922697909_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=u0X9WzcL__YQ7kNvwEIvCYo&_nc_oc=AdkxE7kvN3KFAff3JEtUTgn05Fw3KjFmyNyyPYGw4D4_MzhXIjh3ekfhW0H4hFMB2Lg&_nc_zt=23&_nc_ht=scontent.fnbo18-1.fna&_nc_gid=kibe76JvgXla6xeTGmY_lA&oh=00_Afs7uqUiO8sBYPfy52d6bZ5Cg-Q2HkQXb-cRVWN_Rl-pDQ&oe=698D5204'
+      image: 'https://scontent.fnbo18-1.fna.fbcdn.net/v/t39.30808-6/556638933_122198232542321146_4782129414654441653_n.png?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=kF2dtIPKG-EQ7kNvwHLel8n&_nc_oc=Adm-6COhYinwbeht3J3kfG-qC5qg5w9O7WNbVnPxkwaA3OJz8dfVqSFuR11LdUCoDQc&_nc_zt=23&_nc_ht=scontent.fnbo18-1.fna&_nc_gid=dN1p_nCY75U3ou3v17D3xg&oh=00_Afsdqjb_Vc1aNbjPjI5susLX4RDrJV4zp5dn7-06hm5cvA&oe=69969F0D'
     },
     { 
      
         
-      role: 'Umukundwa bonnette',
-      image: 'https://scontent.fnbo18-1.fna.fbcdn.net/v/t39.30808-6/573303536_122188028342348810_2048461907889935660_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=n2z4DczR0mkQ7kNvwHB5W8J&_nc_oc=AdkAhFX8-LXIN70h9aIGJi-AF_25NtvQtHSAdIrvjt6UAoTHnhfHJFEv8A6scbC740Q&_nc_zt=23&_nc_ht=scontent.fnbo18-1.fna&_nc_gid=9ZPuPAvxAuH7I7isMwuU-w&oh=00_Aft54LHAANZAAT3FISxAyQbzX8WqUN6DM5MUVYzTHlb4tg&oe=698D35B8'
+      role: 'puty millium',
+      image: 'https://scontent.fnbo18-1.fna.fbcdn.net/v/t39.30808-6/472530212_122154949592321146_7482547342499520520_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=v5Ch0biYImkQ7kNvwEFwfY4&_nc_oc=AdnSH4Bjp6ZQ9KnK28hHJC9nmrxxaWbvBWgYGuRYW36ldKgzKhT8PiYB4uKlJdbmZsQ&_nc_zt=23&_nc_ht=scontent.fnbo18-1.fna&_nc_gid=ezojvtYWw6PpHymHJ0scpA&oh=00_Afv41Wdc2ItYGpmvzNaOaK2SuW43AcVZY9dlvjW6cVEbWQ&oe=69969034'
     }
   ];
 
